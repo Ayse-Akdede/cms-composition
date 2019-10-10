@@ -1,17 +1,11 @@
-	<?php
-	$fields = get_fields();
-
-if( $fields ): ?>
-	<h1><?php the_title(); ?></h1>
-    <ul>
-        <?php foreach( $fields as $name => $value ): ?>
-            <li><b><?php echo $name; ?></b> <?php print_r($value); ?></li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-<?php	if ( have_posts() ) : while ( have_posts() ) : the_post();
-?>
+    <h1><?php  the_field('etudearchi_titre_e');?></h1>
+    <h3><?php  the_field('etudearchi_Sous-Titre_e');?></h3>
+    <p><?php  the_field('etudearchi_Wysiwyg_e');?></p>
+    <?php if( have_rows('etudearchi_reptext') ):
+        while ( have_rows('etudearchi_reptext') ) : the_row();?>
+        <p><?php the_sub_field('text');?></p>
+    <?php endwhile;endif;?>
 
 
-<?php
-	endwhile; endif;?>
+
+

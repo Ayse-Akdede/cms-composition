@@ -1,0 +1,12 @@
+<?php if( have_rows('teta_ajouter_image') ):
+        // loop through the rows of data
+        while ( have_rows('teta_ajouter_image') ) : the_row();
+        // display a sub field value
+          ?> <div id="slide">
+               <img src="<?php echo get_sub_field('img')['url']?>" alt="">
+          </div>
+          <?php 
+endwhile;endif;?>
+<h1><?php the_field('teta_titre_t')?></h1>
+<h3><?php the_field('teta_sous-titre_t')?></h3>
+<p><?php the_field('teta_wysiwyg_t')?></p>
