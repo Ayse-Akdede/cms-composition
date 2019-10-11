@@ -1,0 +1,8 @@
+body .bandeau {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap; }
+  body .bandeau .bandeau-left {
+    width: 50%; }
+  body .bandeau .bandeau-right {
+    width: 50%; }
