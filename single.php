@@ -1,45 +1,49 @@
 <?php get_header();
-  var_dump(get_fields()); ?>
+ ?>
   <?php   if( have_posts() ) : while( have_posts() ) : the_post(); ?>
  
     <article class="post">
-      <?php the_post_thumbnail(); ?>
+      
 
       <h1><?php the_title(); ?></h1>
-<img src="<?php echo get_field('flexible_content')[1]['img_bloc']['url']?>" alt="">
-      <div class="post__meta">
-        <?php echo get_avatar( get_the_author_meta( 'ID' ), 40 ); ?>
-        <p>
-          Publié le <?php the_date(); ?>
-          par <?php the_author(); ?>
-          Dans la catégorie <?php the_category(); ?>
-          Avec les étiquettes <?php the_tags(); ?>
-        </p>
-      </div>
+      
 
-      <div class="post__content">
-        <?php the_content(); ?>
-<p>
-    <strong>Avis :</strong> 
-    <?php echo get_post_meta( get_the_ID(), 'avis', true ); ?>
-</p>
+<?php
 
-<p>
-    <strong>Note :</strong>
-    <?php echo get_post_meta( get_the_ID(), 'note', true ); ?> / 10
-</p>
+// check if the flexible content field has rows of data
+if( have_rows('flexible_content') ):
 
-<div class="plus-moins">
-    <div class="plus">
-        <?php echo get_post_meta( get_the_ID(), 'plus', true ); ?>
-    </div>
-    <div class="plus">
-        <?php echo get_post_meta( get_the_ID(), 'moins', true ); ?>
-    </div>
-</div>
-      </div>
+     // loop through the rows of data
+    while ( have_rows('flexible_content') ) : the_row();
+
+        if( get_row_layout() == 'titre' ):
+          ?>
+        	<h2><?php the_sub_field('titre_bloc');?></h2>
+
+          <?php
+
+        elseif( get_row_layout() == 'content_intro' ): 
+
+          the_sub_field('content_intro');
+          
+
+        elseif( get_row_layout() == 'content_image'):    
+          ?>
+        <img src="<?php echo get_sub_field('img_bloc')['url']?>" alt="" width="50%">
+<?php
+        endif;
+
+    endwhile;
+
+else :
+
+    // no layouts found
+
+endif;
+
+?>
+
     </article>
 
   <?php endwhile; endif; ?>
-  <?php get_template_part( 'newsletter' ); ?>
 <?php get_footer(); ?>
