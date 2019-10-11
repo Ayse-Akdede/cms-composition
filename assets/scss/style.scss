@@ -1,0 +1,13 @@
+body{
+    .bandeau {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        .bandeau-left{
+            width: 50%;
+        }
+        .bandeau-right{
+            width: 50%;
+        }
+    }
+}

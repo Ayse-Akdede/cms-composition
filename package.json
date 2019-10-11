@@ -1,0 +1,22 @@
+{
+  "name": "cms-composition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch assets/scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miabarbir/cms-composition.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miabarbir/cms-composition/issues"
+  },
+  "homepage": "https://github.com/miabarbir/cms-composition#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
