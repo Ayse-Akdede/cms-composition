@@ -22,5 +22,5 @@
     </article>
 
   <?php endwhile; endif; ?>
-  <?php get_template_part( 'newsletter' ); ?>
+  
 <?php get_footer(); ?>

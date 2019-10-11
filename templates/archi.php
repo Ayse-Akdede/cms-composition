@@ -6,6 +6,7 @@
   ?>
   <h1><?php the_title(); ?></h1>
   <?php 
+    get_template_part( 'templates/partsarchi/diaporama' ); 
     get_template_part( 'templates/partsarchi/etudearchi' ); 
     get_template_part( 'templates/partsarchi/nghisteph' ); 
     get_template_part( 'templates/partsarchi/tissusetarti' ); 
