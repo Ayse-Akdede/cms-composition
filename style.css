@@ -17,3 +17,7 @@ Version: 1.0
     top: 32px;
     /* on prend en compte le décalage */
 }
+
+.mapsb {
+    color: black;
+}
