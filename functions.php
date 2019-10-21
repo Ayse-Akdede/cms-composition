@@ -14,7 +14,6 @@ add_action('wp_enqueue_scripts','Load_Template_Scripts');
 function Load_Template_Scripts(){
     if ( is_page_template('templates/archi.php') ) {
         wp_enqueue_style( 'archistyle', get_template_directory_uri() . '/assets/css/archistyle.css', array(), '', 'all');
-        wp_enqueue_script('script-slide', get_template_directory_uri().'/templates/partsarchi/js/slide.js',array('jquery'),'',true);
         wp_enqueue_script('script-archi', get_template_directory_uri().'/templates/partsarchi/js/archiscript.js',array('jquery'),'',true);
     } 
 }

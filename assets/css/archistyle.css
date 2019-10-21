@@ -1,1 +1,50 @@
-body {}
+body {
+    font-family: "proxima-nova", sans-serif;
+    color: black;
+}
+
+.top-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background: #000; */
+    background-repeat: repeat;
+    height: calc(776px - 140px);
+    width: 100%;
+    color: white;
+}
+
+#slider-box {
+    position: relative;
+    /* height: 707px; */
+    overflow: hidden;
+    width: 75%;
+}
+
+.link-a {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    color: black;
+    padding: 30px;
+}
+
+.proj {
+    position: relative;
+    display: none;
+}
+
+.proj img {
+    width: 100%;
+}
+
+.proj p {
+    display: inline;
+    padding: 20px;
+}
+
+.titre-left {
+    border-right: solid 1px;
+}
