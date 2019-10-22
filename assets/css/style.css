@@ -22,7 +22,7 @@ a:active {
   color: #000;
   text-decoration: none; }
 
-/* Image grid conifig */
+/* Image grid config */
 .photo {
   grid-area: photo; }
 
@@ -39,14 +39,21 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%; }
-    body .bandeau .link-bandeau {
+    body .bandeau .button-left-content {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: flex-start; }
+      body .bandeau .button-left-content .link-bandeau {
+        font: 18px Proxima Nova, sans-serif;
+        font-style: bold; }
+    body .bandeau .button-left-content > p:nth-child(2) {
       font: 18px Proxima Nova, sans-serif;
-      font-style: bold; }
+      font-style: bold;
+      margin-left: 25px; }
     body .bandeau .left-link-block, body .bandeau .right-link-block {
       width: 70%;
       box-shadow: 0px 2px 10px 3px rgba(136, 136, 136, 0.1);
       transition: transform 0.6s, box-shadow 0.8s;
-      top: -100px;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 25px; }
@@ -71,9 +78,44 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%; }
-    body .intro .intro-left .block-top {
-      background-color: #000;
-      color: #FFF; }
-    body .intro .intro-left .block-bottom {
-      background-color: #FFF;
-      color: #000; }
+    body .intro .intro-left {
+      width: 80%; }
+      body .intro .intro-left .block-top {
+        background-color: #000;
+        color: #FFF;
+        padding: 120px 100px; }
+      body .intro .intro-left .block-bottom {
+        background-color: #FFF;
+        color: #000;
+        padding: 100px 0 100px 100px; }
+        body .intro .intro-left .block-bottom .link-intro {
+          display: flex;
+          flex-flow: row wrap;
+          align-content: flex-start; }
+        body .intro .intro-left .block-bottom .link-intro > p {
+          font: 18px Proxima Nova, sans-serif;
+          font-style: bold !important; }
+        body .intro .intro-left .block-bottom .link-intro > p:nth-child(2) {
+          font: 18px Proxima Nova, sans-serif;
+          font-style: bold !important;
+          margin-left: 25px; }
+    body .intro .intro-right {
+      width: 80%;
+      margin: 0 auto; }
+  body .milieu .middle-text {
+    font: 24px Proxima Nova, sans-serif;
+    font-style: bold; }
+  body .milieu .middle-link {
+    display: flex;
+    flex-flow: row wrap; }
+    body .milieu .middle-link p:first-child {
+      font: 18px Proxima Nova, sans-serif;
+      font-style: bold; }
+    body .milieu .middle-link p:nth-child(2) {
+      font: 18px Proxima Nova, sans-serif;
+      font-style: bold !important;
+      margin-left: 25px; }
+  body .tissus {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%; }

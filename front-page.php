@@ -12,8 +12,8 @@
 		<?php 
     		get_template_part( 'templates/partsfront/bandeau' ); 
     		get_template_part( 'templates/partsfront/intro' ); 
-			// get_template_part( 'templates/partsfront/milieu' ); 
-			// get_template_part( 'templates/partsfront/tissus' ); 
+			get_template_part( 'templates/partsfront/milieu' ); 
+			get_template_part( 'templates/partsfront/tissus' ); 
     	?>
 
 

@@ -34,7 +34,8 @@
 							<div id="button-left">
 								<div class="content-button">
 									<a class="button-left-content" href="<?php echo $button; ?>">
-										<p class="link-bandeau"><?php echo $button['titre-bouton-g']; ?> &#8594;</p>
+										<p class="link-bandeau"><?php echo $button['titre-bouton-g']; ?></p>
+										<p>&#8594;</p>
 									</a>
 								</div>
 							</div>

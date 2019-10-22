@@ -1,3 +1,5 @@
+<br>
+
 <section class="intro">
 		<div class="intro-left">
 			<div class="block-top">
@@ -19,8 +21,9 @@
 
 				<p><?php the_field('intro_wysiwyg_intro'); ?></p>
 
-				<a class="link_intro" href="<?php the_field('intro_lien_intro')  ?>">
+				<a class="link-intro" href="<?php the_field('intro_lien_intro')  ?>">
 					<p>Le magasin</p>
+					<p>&#8594;</p>
 				</a>
 			</div>
 		</div>
