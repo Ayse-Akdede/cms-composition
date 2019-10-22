@@ -1,4 +1,4 @@
-<div id="slide">
+<div id="slider-img">
 <?php if( have_rows('teta_ajouter_image') ):
         // loop through the rows of data
         while ( have_rows('teta_ajouter_image') ) : the_row();

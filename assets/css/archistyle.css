@@ -18,6 +18,14 @@ body {
     position: relative;
     height: 707px;
     width: 75%;
+    margin-left: 50px
+}
+
+#slider-img {
+    position: relative;
+    height: 707px;
+    width: 75%;
+    margin-left: 50px
 }
 
 #slider-box article {
@@ -77,4 +85,49 @@ body {
 .btn-carou:hover {
     background-color: #808080;
     color: white;
+}
+
+#etudarchi {
+    display: flex;
+}
+
+#ngh {
+    display: flex;
+    padding-left: 50px;
+}
+
+.gauche {
+    width: 35%;
+    padding: 0 50px;
+}
+
+.droite {
+    background-color: black;
+    color: white;
+    flex-grow: 2;
+    padding: 50px;
+}
+
+.droite-white {
+    flex-grow: 2;
+    padding: 120px 18% 40px 18%;
+}
+
+.gauche>h1:nth-child(1) {
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+
+.gauche>h3:nth-child(2) {
+    margin-bottom: 65px;
+    margin-top: 0px;
+}
+
+.titre-liste {
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+
+#ngh>img:nth-child(1) {
+    height: 673.817px;
 }

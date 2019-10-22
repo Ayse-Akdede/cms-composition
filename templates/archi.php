@@ -11,11 +11,13 @@
   <div id="slider-box">
   <?php get_template_part( 'templates/partsarchi/diaporama' ); ?>
   </div>
-  <?php 
-  
-    get_template_part( 'templates/partsarchi/etudearchi' ); 
-    get_template_part( 'templates/partsarchi/nghisteph' ); 
-    get_template_part( 'templates/partsarchi/tissusetarti' ); 
-    ?>
-	<?php get_footer();
-?>
+  <div id="etudarchi">
+  <?php get_template_part( 'templates/partsarchi/etudearchi' ); ?>
+    </div>
+    <div id="ngh">
+   <?php get_template_part( 'templates/partsarchi/nghisteph' ); ?>
+</div>
+   <div>
+   <?php get_template_part( 'templates/partsarchi/tissusetarti' ); ?>
+   </div>
+	<?php get_footer();?>
