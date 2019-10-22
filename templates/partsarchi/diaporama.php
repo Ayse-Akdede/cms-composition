@@ -1,7 +1,9 @@
 
 <?php 
     $query = new WP_Query(array('post_type' => 'project',));
-
+?>
+<div id="proj-container">
+<?php 
     if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); 
     ?>
 
@@ -20,7 +22,10 @@
 <?php endif; endwhile;?>
 </article>
     <?php endwhile;endif; ?>
-        <button id="next">-&gt;</button>
-        <button id="previous">&lt;-</button>
+    </div>
+    <div>
+        <button class="btn-carou" id="next">-&gt;</button>
+        <button class="btn-carou" id="previous">&lt;-</button>
+    </div>
    
 <?php wp_reset_postdata();?>
