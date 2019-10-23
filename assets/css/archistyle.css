@@ -1,6 +1,8 @@
 body {
     font-family: "proxima-nova", sans-serif;
     color: black;
+    margin-left: 0px;
+ margin-right: 0px;
 }
 
 .top-bg {
@@ -25,7 +27,23 @@ body {
     position: relative;
     height: 707px;
     width: 75%;
-    margin-left: 50px
+    margin-left: 243px;
+    margin-top: 135px;
+}
+
+#slider-img img {
+    transition: all 0.5s linear;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+}
+
+#btn-slide-img {
+    position: absolute;
+    top: 0;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
 }
 
 #slider-box article {
@@ -110,7 +128,7 @@ body {
 
 .droite-white {
     flex-grow: 2;
-    padding: 120px 18% 40px 18%;
+    padding: 61.4px 4% 40px 12%;
 }
 
 .gauche>h1:nth-child(1) {
@@ -130,4 +148,58 @@ body {
 
 #ngh>img:nth-child(1) {
     height: 673.817px;
+}
+
+#flex-wis {
+    margin-left: 243px;
+    width: 60%;
+}
+
+#wis-col {
+    display: flex;
+}
+
+div.textes-container:nth-child(2) {
+    width: 50%;
+}
+
+div.textes-container:nth-child(1) {
+    width: 50%;
+}
+
+#block-banner {
+    height: 527px;
+    position: relative;
+    background-repeat: round;
+    width: 100%;
+}
+
+#block-banner>#content {
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#content>a:nth-child(1) {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    padding: 60px 15% 60px 5%;
+}
+
+#content>a:nth-child(1)>div:nth-child(2) {
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+#content>a:nth-child(1)>div:nth-child(2):hover {
+    /* border-bottom: 2px solid currentColor;
+    display: inline-block; */
+}
+#content > a:nth-child(1) > h2:nth-child(1) {
+ font-size: 33px;
 }

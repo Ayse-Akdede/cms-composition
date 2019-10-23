@@ -1,26 +1,39 @@
+class opaslide {
+    constructor(tabelemet) {
+        this.tab = tabelemet;
+        this.index = 0;
+        this.tab.item(this.index).style.opacity = "1";
+    }
+    next = () => {
+        this.tab.item(this.index).style.opacity = "0";
+        this.index++;
+        if (this.index > this.tab.length - 1) {
+            this.index = 0;
+        }
+        this.tab.item(this.index).style.opacity = "1";
+    };
+    previous = () => {
+        this.tab.item(this.index).style.opacity = "0";
+        this.index--;
+        if (this.index < 0) {
+            this.index = this.tab.length - 1;
+        }
+        this.tab.item(this.index).style.opacity = "1";
+    };
+
+}
+
 (() => {
-    let index = 0;
+
     let tabarticle = document.getElementsByClassName("proj");
-    tabarticle.item(index).style.opacity = "1";
+    let slidearticle = new opaslide(tabarticle);
 
-    let next = () => {
-        tabarticle.item(index).style.opacity = "0";
-        index++;
-        if (index > tabarticle.length - 1) {
-            index = 0;
-        }
-        tabarticle.item(index).style.opacity = "1";
-    };
+    document.getElementById("next").addEventListener("click", slidearticle.next);
+    document.getElementById("previous").addEventListener("click", slidearticle.previous);
 
-    let previous = () => {
-        tabarticle.item(index).style.opacity = "0";
-        index--;
-        if (index < 0) {
-            index = tabarticle.length - 1;
-        }
-        tabarticle.item(index).style.opacity = "1";
-    };
+    let tabimg = document.getElementById("slider-img").getElementsByTagName("img");
+    let slideimg = new opaslide(tabimg);
 
-    document.getElementById("next").addEventListener("click", next);
-    document.getElementById("previous").addEventListener("click", previous);
+    document.getElementById("next-img").addEventListener("click", slideimg.next);
+    document.getElementById("previous-img").addEventListener("click", slideimg.previous);
 })();

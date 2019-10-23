@@ -1,14 +1,33 @@
 <div id="slider-img">
 <?php if( have_rows('teta_ajouter_image') ):
-        // loop through the rows of data
-        while ( have_rows('teta_ajouter_image') ) : the_row();
-        // did value
-          ?> 
-               <img src="<?php echo get_sub_field('img')['url']?>" alt="">
+        while ( have_rows('teta_ajouter_image') ) : the_row();?> 
+         <img src="<?php echo get_sub_field('img')['url']?>" alt="<?php the_sub_field('titre_t')?>">
+         
+         <?php endwhile;?>
+        <div id="btn-slide-img">
+          <button class="btn-carou" id="next-img">-&gt;</button>
+          <button class="btn-carou" id="previous-img">&lt;-</button>
+        </div>
+        <?php endif;?>
+   
+</div>
+
+<div id="flex-wis">
+  <h2><?php the_field('teta_titre_t')?></h2>
+  <h4><?php the_field('teta_sous-titre_t')?></h4>
+  <div id="wis-col"><?php the_field('teta_wysiwyg_t')?></div>
+</div>
+
+<div id="block-banner" style="background-image: url(<?php echo get_template_directory_uri()?>/assets/images/Blog-2.jpg);">
+  <div id="content">
+    <a href=""><h2>Je souhaite connaître les conditions</h2>
+    <div>
+    Contact
+      <div >
         
-          <?php 
-endwhile;endif;?>
+      </div>
+    </div>
+    </a>
+    
   </div>
-<h1><?php the_field('teta_titre_t')?></h1>
-<h3><?php the_field('teta_sous-titre_t')?></h3>
-<p><?php the_field('teta_wysiwyg_t')?></p>
+</div>

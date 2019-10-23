@@ -17,7 +17,7 @@
     <div id="ngh">
    <?php get_template_part( 'templates/partsarchi/nghisteph' ); ?>
 </div>
-   <div>
+
    <?php get_template_part( 'templates/partsarchi/tissusetarti' ); ?>
-   </div>
+
 	<?php get_footer();?>
