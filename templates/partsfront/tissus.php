@@ -1,9 +1,11 @@
 <section class="tissus">
 
     <div class="tissus-left">
-		<?php if( get_field('tissus_image_tissus') ): ?>
-			<img src="<?php the_field('tissus_image_tissus'); ?>" />
-		<?php endif; ?>
+        <div class="photo">
+            <?php if( get_field('tissus_image_tissus') ): ?>
+                <img src="<?php the_field('tissus_image_tissus'); ?>" />
+            <?php endif; ?>
+        </div>
 	</div>
 
     <div class="tissus-right">
