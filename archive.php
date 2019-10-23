@@ -8,23 +8,22 @@
 			if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
 		<article class="post">
-			
+		<a href="<?php the_permalink(); ?>" class="post__link">
 			
 			<?php	while ( have_rows('flexible_content') ) : the_row();
 				if( get_row_layout() == 'titre' ):
 			?>
 
-			<a href="<?php the_permalink(); ?>" class="post__link">
-				<h2><?php the_sub_field('titre_bloc');?></h2>
-			</a>
+			
+			<h2 class="titre-article"><?php the_sub_field('titre_bloc');?></h2>
+		
 
 			<?php
 				elseif( get_row_layout() == 'content_image'):    
 			?>
 
 			<div class="image-container">
-				<div class="image" style="background-image: url(<?php echo get_sub_field('img_bloc')['url']; ?>)"/>
-				</div>
+				<img src="<?php echo get_sub_field('img_bloc')['url']; ?>" alt="<?php echo get_sub_field('img_bloc')['title']; ?>" />
 			</div>
 
 			<?php
@@ -34,13 +33,16 @@
 			?>
 			
 			<p class="post__meta">
-				Publié le <?php the_time( get_option( 'date_format' ) ); ?> 
+				— <?php the_time( get_option( 'date_format' ) ); ?> 
 			</p>	
-				
+			</a>		
 		</article>
-	
-	
 
 		<?php endwhile; endif; ?>
+
+
 	</div>
+
+	<div class="nav-previous alignleft"><?php echo previous_posts_link( 'Older posts' ); ?></div>
+		<div class="nav-next alignright"><?php echo next_posts_link( 'Newer posts' ); ?></div>
 <?php get_footer(); ?>

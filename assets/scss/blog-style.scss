@@ -1,33 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0px;
     margin: 0px;
+    font-family: sans-serif;
+    color: black;
+
+    /*---------- Tout les posts/articles ------------*/
+
 
     .content {
-        max-width: 1500px;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
+        margin: 0 auto;
 
-
+        /* ---------- Post de l'article avec img & titre & date ------------ */
         article {
+
             width: 50%;
+            padding: 20px;
 
             .image-container {
                 background-color: grey;
-                width: 560px;
-                height: 440px;
+                width: 100%;
+                min-height: 440px;
+                position: relative;
 
-                .image {
-                    background-position: center;
-                    background-size: cover;
+
+
+                img {
                     width: 100%;
                     height: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    display: block;
                 }
             }
 
-            a:link {
-                text-decoration: none;
+            /* -------- Lien sur chaque article : Image & titre & date de post ---------- */
+            a {
+
+                color: black;
+
+                &:link {
+                    text-decoration: none;
+                }
+
+                &>h2 {
+                    font-weight: 700px;
+                    color: #000;
+                    margin-bottom: 30px;
+                }
+
+                &:hover {
+
+                    text-decoration: none;
+
+                    .titre-article {
+                        text-decoration: underline;
+                        color: black;
+                    }
+                }
             }
+
+
         }
+
     }
 }

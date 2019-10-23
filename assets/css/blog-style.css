@@ -1,36 +1,71 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   padding: 0px;
   margin: 0px;
+  font-family: sans-serif;
+  color: black;
+  /*---------- Tout les posts/articles ------------*/
 }
 
 body .content {
-  max-width: 1500px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 auto;
+  /* ---------- Post de l'article avec img & titre & date ------------ */
 }
 
 body .content article {
   width: 50%;
+  padding: 20px;
+  /* -------- Lien sur chaque article : Image & titre & date de post ---------- */
 }
 
 body .content article .image-container {
   background-color: grey;
-  width: 560px;
-  height: 440px;
+  width: 100%;
+  min-height: 440px;
+  position: relative;
 }
 
-body .content article .image-container .image {
-  background-position: center;
-  background-size: cover;
+body .content article .image-container img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+}
+
+body .content article a {
+  color: black;
 }
 
 body .content article a:link {
   text-decoration: none;
+}
+
+body .content article a > h2 {
+  font-weight: 700px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+body .content article a:hover {
+  text-decoration: none;
+}
+
+body .content article a:hover .titre-article {
+  text-decoration: underline;
+  color: black;
 }
 /*# sourceMappingURL=blog-style.css.map */
