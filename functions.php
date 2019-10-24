@@ -13,4 +13,4 @@ add_theme_support( 'post-thumbnails' );
 function Load_Template_Scripts(){
   wp_enqueue_style( 'test', get_template_directory_uri() . '/assets/css/blog-style.css', array(), '', 'all');
 
-} 
+}
