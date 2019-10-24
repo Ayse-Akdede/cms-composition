@@ -14,7 +14,7 @@
   <div id="etudarchi">
   <?php get_template_part( 'templates/partsarchi/etudearchi' ); ?>
     </div>
-    <div id="ngh">
+<div id="ngh">
    <?php get_template_part( 'templates/partsarchi/nghisteph' ); ?>
 </div>
 

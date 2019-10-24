@@ -2,7 +2,7 @@ body {
     font-family: "proxima-nova", sans-serif;
     color: black;
     margin-left: 0px;
- margin-right: 0px;
+    margin-right: 0px;
 }
 
 .top-bg {
@@ -147,7 +147,7 @@ body {
 }
 
 #ngh>img:nth-child(1) {
-    height: 673.817px;
+    height: 680.817px;
 }
 
 #flex-wis {
@@ -196,10 +196,74 @@ div.textes-container:nth-child(1) {
     padding-right: 15px;
 }
 
-#content>a:nth-child(1)>div:nth-child(2):hover {
-    /* border-bottom: 2px solid currentColor;
-    display: inline-block; */
+#content>a:nth-child(1)>p:nth-child(2) {
+    font-weight: bold;
 }
-#content > a:nth-child(1) > h2:nth-child(1) {
- font-size: 33px;
+
+#content>a:nth-child(1)>h2:nth-child(1) {
+    font-size: 33px;
+}
+
+div.textes-container:nth-child(1)>div:nth-child(1)>p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 1.2px;
+}
+
+div.textes-container:nth-child(2)>div:nth-child(1)>ul:nth-child(2) {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 1.2px;
+}
+
+div.textes-container:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 1.2px;
+}
+
+div.textes-container:nth-child(2)>div:nth-child(1) {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 1.2px;
+}
+
+
+/* partie a propos */
+
+#slider-imgs {
+    position: relative;
+    height: 707px;
+    width: 100%;
+    margin-left: 75px;
+}
+
+#slider-imgs img {
+    transition: all 0.5s linear;
+    position: absolute;
+    opacity: 0;
+    width: 80%;
+}
+
+#slider-imgs>div:nth-child(10) {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    display: flex;
+    flex-direction: column;
+}
+
+body>div:nth-child(3) {
+    display: flex;
+}
+
+body>div:nth-child(3)>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -200px;
 }
