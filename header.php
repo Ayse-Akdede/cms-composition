@@ -8,7 +8,9 @@
     <body <?php body_class(); ?>>
 
     <header>
-        Je suis le header
+        <div id="header-container">
+          <?php wp_nav_menu('Header');?>
+        </div>
     </header>
     
  

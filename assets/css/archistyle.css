@@ -267,3 +267,25 @@ body>div:nth-child(3)>div:nth-child(2) {
     position: relative;
     left: -200px;
 }
+
+.trait {
+    display: inline-block;
+    border-bottom: 1px solid #999999;
+    width: 40px;
+    transform: translateY(-480%);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.description {
+    display: inline-block;
+    color: #999999;
+}
+
+.droite>ul:nth-child(1)>li {
+    list-style-type: none;
+}
+
+#bnr {
+    margin-top: 220px;
+}
