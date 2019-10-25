@@ -22,13 +22,15 @@ body section#single-blog-page div.top-container {
 
 body section#blog-page div.top-container h1,
 body section#single-blog-page div.top-container h1 {
-  padding-top: 100px;
-  color: white;
   font-size: 2rem;
 }
 
+body section#blog-page div.top-container h1,
 body section#blog-page div.top-container p,
-body section#single-blog-page div.top-container p {
+body section#blog-page div.top-container a,
+body section#single-blog-page div.top-container h1,
+body section#single-blog-page div.top-container p,
+body section#single-blog-page div.top-container a {
   color: white;
 }
 
@@ -51,7 +53,12 @@ body section#blog-page {
   /*---------- Tout les posts/articles ------------*/
 }
 
+body section#blog-page div.top-container h1 {
+  padding-top: 100px;
+}
+
 body section#blog-page .content {
+  width: 100%;
   /* ---------- Post de l'article avec img & titre & date ------------ */
 }
 
@@ -102,7 +109,51 @@ body section#blog-page .content article a:hover .titre-article {
   color: black;
 }
 
-body section#single-blog-page .content {
+body section#single-blog-page div.top-top {
+  padding-top: 60px;
+}
+
+body section#single-blog-page div.top-container div.title {
+  width: 50%;
+  margin: auto;
+}
+
+body section#single-blog-page div.top-container div.top-top {
+  width: 50%;
+  margin: auto;
+}
+
+body section#single-blog-page div.top-container div.top-top div.top-top-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body section#single-blog-page div.top-container div.top-top div.top-top-top a {
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+body section#single-blog-page div.top-container div.top-top div.top-top-top a:hover {
+  text-decoration: underline;
+  padding-left: 0px;
+}
+
+body section#single-blog-page div.top-container div.top-top div.top-top-top a:hover i {
+  padding-right: 13px;
+}
+
+body section#single-blog-page div.top-container div.top-top div.top-top-top a i {
+  padding-right: 10px;
+}
+
+body .content {
   margin: auto;
   width: 50%;
   display: -webkit-box;
@@ -113,20 +164,20 @@ body section#single-blog-page .content {
           align-items: center;
 }
 
-body section#single-blog-page .content .title {
+body .content .title {
   width: 50%;
   margin: auto;
 }
 
-body section#single-blog-page .content .title h1 {
+body .content .title h1 {
   text-align: center;
 }
 
-body section#single-blog-page .content article {
+body .content article {
   width: 100%;
 }
 
-body section#single-blog-page .content article img {
+body .content article img {
   width: 100%;
 }
 /*# sourceMappingURL=blog-style.css.map */

@@ -17,12 +17,12 @@ body {
             position: relative;
 
             h1 {
-                padding-top: 100px;
-                color: white;
                 font-size: 2rem;
             }
 
-            p {
+            h1,
+            p,
+            a {
                 color: white;
             }
         }
@@ -42,12 +42,15 @@ body {
     /*Page BLOG*/
     section#blog-page {
 
-
+        div.top-container {
+            h1 {
+                padding-top: 100px;
+            }
+        }
 
         /*---------- Tout les posts/articles ------------*/
-
-
         .content {
+            width: 100%;
 
             /* ---------- Post de l'article avec img & titre & date ------------ */
             article {
@@ -60,8 +63,6 @@ body {
                     width: 100%;
                     min-height: 440px;
                     position: relative;
-
-
 
                     img {
                         width: 100%;
@@ -100,36 +101,81 @@ body {
                         }
                     }
                 }
-
-
             }
-
         }
     }
 
     /* Page SINGLE BLOG */
     section#single-blog-page {
-        .content {
-            margin: auto;
-            width: 50%;
-            display: flex;
-            align-items: center;
 
-            .title {
+        div.top-top {
+            padding-top: 60px;
+        }
+
+        div.top-container {
+            div.title {
+                width: 50%;
+                margin: auto;
+            }
+
+            div.top-top {
                 width: 50%;
                 margin: auto;
 
-                h1 {
-                    text-align: center;
+                div.top-top-top {
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        padding-left: 3px;
+
+                        &:hover {
+                            text-decoration: underline;
+                            padding-left: 0px;
+
+                            i {
+                                padding-right: 13px;
+                            }
+                        }
+
+                        i {
+                            padding-right: 10px;
+
+
+                        }
+
+                    }
+
+
                 }
             }
 
-            article {
-                width: 100%;
+        }
+    }
 
-                img {
-                    width: 100%;
-                }
+    .content {
+        margin: auto;
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        .title {
+            width: 50%;
+            margin: auto;
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        article {
+            width: 100%;
+
+            img {
+                width: 100%;
             }
         }
     }

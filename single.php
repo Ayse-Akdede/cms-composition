@@ -3,10 +3,12 @@
   <?php   if( have_posts() ) : while( have_posts() ) : the_post();?>
     <div class="top-container">
       <div class="top-top">
-        <p class="back">Retour</p>
-        <p class="post__meta date">
-            — <?php the_time( get_option( 'date_format' ) ); ?> 
-        </p>
+        <div class="top-top-top">
+          <a href="javascript: history.back()"><i class="fa fa-long-arrow-left"></i></i>Retour</a>
+          <p class="post__meta date">
+              <?php the_time( get_option( 'date_format' ) ); ?> 
+           </p>
+        </div>
       </div>
       <div class="title">
         <h1><?php the_title(); ?></h1>
@@ -14,8 +16,6 @@
     </div>
     <div class="content">
       <article class="post">
-          
-          
         
         <?php
 
