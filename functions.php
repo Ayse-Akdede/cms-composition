@@ -11,8 +11,10 @@ add_theme_support( 'post-thumbnails' );
   
 
   function Load_Template_Scripts(){
+    if( is_home() OR is_single() ) {
 
     wp_enqueue_style( 'test', get_template_directory_uri() . '/assets/css/blog-style.css', array(), '', 'all');
+    }
   }
   add_action('wp_enqueue_scripts','Load_Template_Scripts');
 
