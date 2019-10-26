@@ -11,6 +11,32 @@ body {
     /*Page BLOG et SINGLE BLOG*/
     section#blog-page,
     section#single-blog-page {
+
+        div.top-top-top,
+        div.content {
+            a {
+                color: black;
+                text-decoration: none;
+                padding-left: 3px;
+
+                &:hover {
+                    text-decoration: underline;
+                    padding-left: 0px;
+
+                    i {
+                        padding-right: 13px;
+                    }
+                }
+
+                i {
+                    padding-right: 10px;
+
+
+                }
+
+            }
+        }
+
         div.top-container {
             background-color: black;
             height: 500px;
@@ -127,29 +153,6 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-
-                    a {
-                        text-decoration: none;
-                        padding-left: 3px;
-
-                        &:hover {
-                            text-decoration: underline;
-                            padding-left: 0px;
-
-                            i {
-                                padding-right: 13px;
-                            }
-                        }
-
-                        i {
-                            padding-right: 10px;
-
-
-                        }
-
-                    }
-
-
                 }
             }
 
