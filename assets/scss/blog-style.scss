@@ -12,31 +12,6 @@ body {
     section#blog-page,
     section#single-blog-page {
 
-        div.top-top-top,
-        div.content {
-            a {
-                color: black;
-                text-decoration: none;
-                padding-left: 3px;
-
-                &:hover {
-                    text-decoration: underline;
-                    padding-left: 0px;
-
-                    i {
-                        padding-right: 13px;
-                    }
-                }
-
-                i {
-                    padding-right: 10px;
-
-
-                }
-
-            }
-        }
-
         div.top-container {
             background-color: black;
             height: 500px;
@@ -104,7 +79,6 @@ body {
 
                 /* -------- Lien sur chaque article : Image & titre & date de post ---------- */
                 a {
-
                     color: black;
 
                     &:link {
@@ -134,8 +108,28 @@ body {
     /* Page SINGLE BLOG */
     section#single-blog-page {
 
-        div.top-top {
-            padding-top: 60px;
+        .content {
+            margin: auto;
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            .title {
+                width: 50%;
+                margin: auto;
+
+                h1 {
+                    text-align: center;
+                }
+            }
+
+            article {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
 
         div.top-container {
@@ -147,6 +141,7 @@ body {
             div.top-top {
                 width: 50%;
                 margin: auto;
+                padding-top: 60px;
 
                 div.top-top-top {
 
@@ -157,29 +152,34 @@ body {
             }
 
         }
-    }
 
-    .content {
-        margin: auto;
-        width: 50%;
-        display: flex;
-        align-items: center;
+        div.top-top-top,
+        div.content {
+            a {
+                text-decoration: none;
+                padding-left: 3px;
 
-        .title {
-            width: 50%;
-            margin: auto;
+                &:hover {
+                    text-decoration: underline;
+                    padding-left: 0px;
 
-            h1 {
-                text-align: center;
+                    i {
+                        padding-right: 13px;
+                    }
+                }
+
+                i {
+                    padding-right: 10px;
+
+                }
             }
         }
 
-        article {
-            width: 100%;
-
-            img {
-                width: 100%;
+        div.content {
+            a {
+                color: black;
             }
         }
     }
+
 }
