@@ -1,0 +1,147 @@
+
+
+[
+    {
+        "key": "group_5d9db0a5528bc",
+        "title": "POSTS NEWS",
+        "fields": [
+            {
+                "key": "field_5d9dcb846a125",
+                "label": "Flexible Content",
+                "name": "flexible_content",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "layout_5d9dcb9ce24cd": {
+                        "key": "layout_5d9dcb9ce24cd",
+                        "name": "titre",
+                        "label": "Titre",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5d9dcbad6a126",
+                                "label": "Titre",
+                                "name": "titre_bloc",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_5d9dcd96b4cbb": {
+                        "key": "layout_5d9dcd96b4cbb",
+                        "name": "content_image",
+                        "label": "Image",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5d9dce0ab4cbc",
+                                "label": "Image",
+                                "name": "img_bloc",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_5d9dce25b4cbd": {
+                        "key": "layout_5d9dce25b4cbd",
+                        "name": "content_intro",
+                        "label": "Intro",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5d9dce37b4cbe",
+                                "label": "Intro",
+                                "name": "content_intro",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Ajouter un élément",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "news"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "project"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "left",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": true,
+        "description": ""
+    }
+]

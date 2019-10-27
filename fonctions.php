@@ -10,30 +10,22 @@ add_theme_support( 'title-tag' );
   // for post types
   add_filter('use_block_editor_for_post');
 
-function capitaine_register_post_types() {
-	
-  // CPT Portfolio
-  $labels = array(
-      'name' => 'Portfolio',
-      'all_items' => 'Tous les projets',  // affiché dans le sous menu
-      'singular_name' => 'Projet',
-      'add_new_item' => 'Ajouter un projet',
-      'edit_item' => 'Modifier le projet',
-      'menu_name' => 'Portfolio'
-  );
-
-$args = array(
-      'labels' => $labels,
-      'public' => true,
-      'show_in_rest' => true,
-      'has_archive' => true,
-      'supports' => array( 'title', 'editor','thumbnail' ),
-      'menu_position' => 5, 
-      'menu_icon' => 'dashicons-admin-customizer',
-);
-
-register_post_type( 'porfolio', $args );
-}
-add_action( 'init', 'capitaine_register_post_types' ); 
+  add_action('wp_enqueue_scripts','Load_Template_Scripts');
+  function Load_Template_Scripts(){
+    wp_enqueue_style( 'headerstyle', get_template_directory_uri() . '/assets/css/header.css', array(), '', 'all');
+  
+      if ( is_page_template('templates/archi.php')) {
+          wp_enqueue_style( 'archistyle', get_template_directory_uri() . '/assets/css/archistyle.css', array(), '', 'all');
+          wp_enqueue_script('script-opaslider', get_template_directory_uri().'/templates/partsarchi/js/opaslider.js',array(),'',true);
+          wp_enqueue_script('script-archi', get_template_directory_uri().'/templates/partsarchi/js/archiscript.js',array(),'',true);
+      }
+      if ( is_page_template('templates/apropos.php')) {
+          wp_enqueue_style( 'archistyle', get_template_directory_uri() . '/assets/css/archistyle.css', array(), '', 'all');
+          wp_enqueue_script('script-opaslider', get_template_directory_uri().'/templates/partsarchi/js/opaslider.js',array(),'',true);       
+          wp_enqueue_script('script-propos', get_template_directory_uri().'/templates/partsarchi/js/apropos.js',array(),'',true);
+      }
+       
+  }
+  add_theme_support( 'menus' );
   
   
