@@ -5,7 +5,7 @@
 
   get_header();
   ?>
-
+<div id="bgblack"></div>
   <div id="slider-box">
   <?php get_template_part( 'templates/partsarchi/diaporama' ); ?>
   </div>

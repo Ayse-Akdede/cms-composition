@@ -170,8 +170,9 @@ div.textes-container:nth-child(1) {
 #block-banner {
     height: 527px;
     position: relative;
-    background-repeat: round;
+    background-position: 50% 50%;
     width: 100%;
+    background-size: cover;
 }
 
 #block-banner>#content {
@@ -187,6 +188,7 @@ div.textes-container:nth-child(1) {
     text-decoration: none;
     color: black;
     padding: 60px 15% 60px 5%;
+    margin: 0 240px;
 }
 
 #content>a:nth-child(1)>div:nth-child(2) {
