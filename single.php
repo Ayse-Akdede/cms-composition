@@ -18,9 +18,16 @@
 
       <div class="post__content">
         <?php the_content(); ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     </article>
-
+    <?php var_dump(the_field('maps')); ?>
   <?php endwhile; endif; ?>
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> master
 <?php get_footer(); ?>
