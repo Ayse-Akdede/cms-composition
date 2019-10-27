@@ -50,9 +50,5 @@
       <a href="javascript: history.back()"><i class="fa fa-long-arrow-left"></i></i>Voir les autres artciles</a>
     </div>
 
-  <?php endwhile; endif; ?>
-
-  
-  
 </section>
 <?php get_footer(); ?>
