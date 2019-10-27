@@ -1,3 +1,5 @@
+<br> 
+
 <section class="tissus">
 
     <div class="tissus-left">
@@ -14,7 +16,8 @@
         <p><?php the_field('tissus_wysiwyg_tissus'); ?></p>
 
         <a class="link-tissus" href="<?php the_field('tissus_llien_tissus')  ?>">
-                <p>Tissus et habillage maison &#8594;</p>
+                <p>Tissus et habillage maison</p>
+                <p>&#8594;</p>
         </a>
     </div>
 </section>

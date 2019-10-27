@@ -36,10 +36,11 @@ a:link {
 }
 .photo > img {
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     max-height: 100%;
     height: auto;
+    overflow: hidden !important;
 }
 
 body{
@@ -104,14 +105,22 @@ body{
         .intro-left {
             width: 80%;
             .block-top {
-                background-color: $black;
-                color: $white;
-                padding: 120px 100px;
+              height: 425px;
+              background-color: $black;
+              color: $white;
+              display: flex;
+              flex-flow: row wrap;
+              align-content: space-around;
+              padding: 0 100px;
             }
             .block-bottom {
-                background-color: $white;
-                color: $black;
-                padding: 100px 0 100px 100px;
+              height: 425px;
+              background-color: $white;
+              color: $black;
+              display: flex;
+              flex-flow: row wrap;
+              padding: 0 0 0 100px;
+
                 .link-intro{
                   display: flex;
                   flex-flow: row wrap;
@@ -135,21 +144,30 @@ body{
     }
 
     .milieu {
-      .middle-text {
-        font: 24px Proxima Nova, sans-serif;
-        font-style: bold;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .middle-grey {
+        height: 425px;
+        background-color: #f6f6f6;
       }
-      .middle-link {
-        display: flex;
-        flex-flow: row wrap; 
-        p:first-child {
-          font: 18px Proxima Nova, sans-serif;
+      .middle-left {
+        .middle-text {
+          font: 24px Proxima Nova, sans-serif;
           font-style: bold;
         }
-        p:nth-child(2) {
-          font: 18px Proxima Nova, sans-serif;
-          font-style: bold !important;
-          margin-left: 25px;
+        .middle-link {
+          display: flex;
+          flex-flow: row wrap; 
+          p:first-child {
+            font: 18px Proxima Nova, sans-serif;
+            font-style: bold;
+          }
+          p:nth-child(2) {
+            font: 18px Proxima Nova, sans-serif;
+            font-style: bold !important;
+            margin-left: 25px;
+          }
         }
       }
     }
@@ -160,8 +178,16 @@ body{
       display: grid;
       grid-template-columns: 50% 50%; 
       .tissus-right {
+        padding: 60px;
         h2 {
           font-style: bold;
+        }
+        .link-tissus { 
+          display: flex; 
+          flex-flow: row wrap;
+        }
+        .link-tissus > p:nth-child(2){
+          margin-left: 25px;
         }
         .link-tissus > p {
           font-style: bold;
@@ -170,3 +196,44 @@ body{
     }
 }
 
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  
+  
+}
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  //CSS
+  
+}
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  //CSS
+  
+}
