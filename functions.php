@@ -24,11 +24,14 @@ function Load_Template_Scripts(){
         wp_enqueue_script('script-propos', get_template_directory_uri().'/assets/js/apropos.js',array(),'',true);
     }
     if ( is_page_template('page-contact.php')) {
-        wp_enqueue_style( 'contactstyle', get_template_directory_uri() . '/page-contact.css', array(), '', 'all');
-        wp_enqueue_script('script-contact', get_template_directory_uri().'/page-contact.js',array(),'',true);
-        }
+      wp_enqueue_style( 'contactstyle', get_template_directory_uri() . '/page-contact.css', array(), '', 'all');
+      wp_enqueue_script('script-contact', get_template_directory_uri().'/page-contact.js',array(),'',true);
+      }
+    if( is_home() OR is_single() ) {
+
+      wp_enqueue_style( 'test', get_template_directory_uri() . '/assets/css/blog-style.css', array(), '', 'all');
+      }
 }
-add_theme_support( 'menus' );
   
   function your_prefix_render_hfe_header() {
 	
@@ -56,4 +59,11 @@ add_theme_support( 'menus' );
   }
   
   add_action( 'after_setup_theme', 'your_prefix_header_footer_elementor_support' );
+
+
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+function enqueue_load_fa() {
+wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+}
+add_theme_support( 'menus' );
 
