@@ -3,7 +3,7 @@ class opaslide {
         this.tab = tabelemet;
         this.index = 0;
         this.tab.item(this.index).style.opacity = "1";
-    }
+    };
     next = () => {
         this.tab.item(this.index).style.opacity = "0";
         this.index++;
@@ -20,5 +20,6 @@ class opaslide {
         }
         this.tab.item(this.index).style.opacity = "1";
     };
+
 
 }

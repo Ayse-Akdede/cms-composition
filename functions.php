@@ -16,7 +16,7 @@ function Load_Template_Scripts(){
     if ( is_page_template('templates/archi.php')) {
         wp_enqueue_style( 'archistyle', get_template_directory_uri() . '/assets/css/archistyle.css', array(), '', 'all');
         wp_enqueue_script('script-opaslider', get_template_directory_uri().'/assets/js/opaslider.js',array(),'',true);
-        wp_enqueue_script('script-archi', get_template_directory_uri().'/assets/archiscript.js',array(),'',true);
+        wp_enqueue_script('script-archi', get_template_directory_uri().'/assets/js/archiscript.js',array(),'',true);
     }
     if ( is_page_template('templates/apropos.php')) {
         wp_enqueue_style( 'archistyle', get_template_directory_uri() . '/assets/css/archistyle.css', array(), '', 'all');
@@ -29,9 +29,9 @@ function Load_Template_Scripts(){
       }
     if( is_home() OR is_single() ) {
 
-      wp_enqueue_style( 'test', get_template_directory_uri() . '/assets/css/blog-style.css', array(), '', 'all');
+      wp_enqueue_style( 'blog', get_template_directory_uri() . '/assets/css/blog-style.css', array(), '', 'all');
       }
-    wp_enqueue_style( 'test', get_template_directory_uri() . '/assets/css/accueil.css', array(), '', 'all');
+    wp_enqueue_style( 'accueil', get_template_directory_uri() . '/assets/css/accueil.css', array(), '', 'all');
 }
   
   function your_prefix_render_hfe_header() {

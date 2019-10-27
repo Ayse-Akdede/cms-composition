@@ -5,12 +5,18 @@ ul#menu-header>li>a {
 
 ul#menu-header>.link-cms {
     list-style-type: none;
-    margin: 0px 10PX;
+    margin: 2% 10px;
 }
 
 ul#menu-header>.link-cms:hover {
     border-bottom: 3px solid white;
     padding-bottom: 13px;
+}
+
+.menu-header-container {
+    text-align: right;
+    margin-right: 16%;
+    font-weight: bold;
 }
 
 #header-container {

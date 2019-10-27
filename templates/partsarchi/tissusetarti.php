@@ -8,7 +8,7 @@
           <button class="btn-carou" id="next-img">-&gt;</button>
           <button class="btn-carou" id="previous-img">&lt;-</button>
         </div>
-        <?php endif;?>
+<?php endif;?>
    
 </div>
 

@@ -1,4 +1,4 @@
-<?php get_header(); var_dump(get_fields()); ?>
+<?php get_header(); ?>
 
 	<?php 
 	/* var_dump(get_fields()); */ 

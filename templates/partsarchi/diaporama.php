@@ -11,7 +11,8 @@
     <?php  while ( have_rows('flexible_content') ) : the_row();?>
 
 <?php    if( get_row_layout() == 'content_image' ):?>
-<img class="image" src="<?php the_sub_field('img_bloc'); ?>">
+
+<img class="image" src="<?php echo get_sub_field('img_bloc')['url'];  ?>">
 
 <?php    elseif( get_row_layout() == 'titre' ):?>
 <a class="link-a" href=" <?php the_permalink(); ?>">
