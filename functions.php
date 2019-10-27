@@ -14,5 +14,5 @@ add_theme_support( 'title-tag' );
 
 add_action('wp_enqueue_scripts','Load_Template_Style');
 function Load_Template_Style(){
-  wp_enqueue_style( 'test', get_template_directory_uri() . '/assets/css/style.css', array(), '', 'all');
+  wp_enqueue_style( 'test', get_template_directory_uri() . '/assets/css/accueil.css', array(), '', 'all');
 }
