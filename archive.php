@@ -1,24 +1,47 @@
 <?php get_header(); ?>
- 	<h1>Le blog Capitaine WP</h1>
+<section id="blog-page">
+	<div class="top-container">
+		<h1> — Architecte d'intérieur en action</h1>
+	</div>
 
-	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-  
+	<div class="content">
+		<?php 
+			$query = new WP_Query(array('post_type' => 'news',));
+				
+			if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
+		?>
+
 		<article class="post">
-			<h2><?php the_title(); ?></h2>
-      
-        	<?php the_post_thumbnail(); ?>
-            
-            <p class="post__meta">
-                Publié le <?php the_time( get_option( 'date_format' ) ); ?> 
-                par <?php the_author(); ?> • <?php comments_number(); ?>
-            </p>
-            
-      		<?php the_excerpt(); ?>
-              
-      		<p>
-                <a href="<?php the_permalink(); ?>" class="post__link">Lire la suite</a>
-            </p>
-		</article>
+			<a href="<?php the_permalink(); ?>" class="post__link">
+			
+				<?php	while ( have_rows('flexible_content') ) : the_row();
+					if( get_row_layout() == 'titre' ):
+				?>
+					
+				<h2 class="titre-article"><?php the_sub_field('titre_bloc');?></h2>
+				
 
-	<?php endwhile; endif; ?>
+				<?php
+					elseif( get_row_layout() == 'content_image'):    
+				?>
+
+				<div class="image-container">
+					<img src="<?php echo get_sub_field('img_bloc')['url']; ?>" alt="<?php echo get_sub_field('img_bloc')['title']; ?>" />
+				</div>
+
+				<?php
+					endif;
+					endwhile;
+				?>
+					
+				<p class="post__meta">
+					— <?php the_time( get_option( 'date_format' ) ); ?> 
+				</p>	
+				</a>		
+			</article>
+			<?php endwhile; endif; ?>
+		
+	</div>
+</section>
+<?php wp_pagenavi(); ?>
 <?php get_footer(); ?>
