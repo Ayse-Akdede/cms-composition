@@ -52,6 +52,10 @@ body {
       font-style: bold;
       margin-left: 25px; }
     body .bandeau .left-link-block, body .bandeau .right-link-block {
+      position: relative;
+      top: -20%;
+      z-index: 50;
+      background-color: #FFF;
       width: 70%;
       box-shadow: 0px 2px 10px 3px rgba(136, 136, 136, 0.1);
       transition: transform 0.6s, box-shadow 0.8s;
@@ -62,7 +66,13 @@ body {
         text-align: center; }
     body .bandeau .right-link-block {
       background-color: #000;
-      color: #FFF; }
+      color: #FFF;
+      width: 70%;
+      box-shadow: 0px 2px 10px 3px rgba(136, 136, 136, 0.1);
+      transition: transform 0.6s, box-shadow 0.8s;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 25px; }
       body .bandeau .right-link-block a:link {
         color: #FFF;
         text-decoration: none; }
@@ -117,19 +127,23 @@ body {
     body .milieu .middle-grey {
       height: 425px;
       background-color: #f6f6f6; }
-    body .milieu .middle-left .middle-text {
-      font: 24px Proxima Nova, sans-serif;
-      font-style: bold; }
-    body .milieu .middle-left .middle-link {
-      display: flex;
-      flex-flow: row wrap; }
-      body .milieu .middle-left .middle-link p:first-child {
-        font: 18px Proxima Nova, sans-serif;
+    body .milieu .middle-left {
+      position: relative;
+      top: 25%;
+      left: -25%; }
+      body .milieu .middle-left .middle-text {
+        font: 24px Proxima Nova, sans-serif;
         font-style: bold; }
-      body .milieu .middle-left .middle-link p:nth-child(2) {
-        font: 18px Proxima Nova, sans-serif;
-        font-style: bold !important;
-        margin-left: 25px; }
+      body .milieu .middle-left .middle-link {
+        display: flex;
+        flex-flow: row wrap; }
+        body .milieu .middle-left .middle-link p:first-child {
+          font: 18px Proxima Nova, sans-serif;
+          font-style: bold; }
+        body .milieu .middle-left .middle-link p:nth-child(2) {
+          font: 18px Proxima Nova, sans-serif;
+          font-style: bold !important;
+          margin-left: 25px; }
   body .tissus {
     width: 100%;
     display: grid;
@@ -145,3 +159,20 @@ body {
         margin-left: 25px; }
       body .tissus .tissus-right .link-tissus > p {
         font-style: bold; }
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/

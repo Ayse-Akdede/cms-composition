@@ -5,7 +5,8 @@
 						<img src="<?php the_field('bandeau_image_g'); ?>" />
 					<?php endif; ?>
 				</div>
-
+			
+			
 				<div class="left-link-block">
 					<h2>
 						<?php 
