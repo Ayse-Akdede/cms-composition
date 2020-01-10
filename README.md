@@ -1,4 +1,23 @@
-# cms-composition
+# CMS COMPOSITION
+
+- Repository : `cms-composition`
+- Deadline : 28/10/2019 08:59:59
+- Team : group of 4
+
+## Objectifs
+
+- Créer un site web à l'aide d'un CMS  
+- Créer une belle interface client avec des champs customisés  
+- Respecter un design au pixel près  
+
+## membres du groupe 
+
+:bust_in_silhouette: Ayse Akdede  
+:bust_in_silhouette: Nicolas Bonfond
+:bust_in_silhouette: Mia Barbir  
+:bust_in_silhouette: Damien Macors
+
+
 
 **Charte des couleurs**
 blanc :#FFF
