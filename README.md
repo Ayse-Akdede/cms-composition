@@ -13,7 +13,7 @@
 ## membres du groupe 
 
 :bust_in_silhouette: Ayse Akdede  
-:bust_in_silhouette: Nicolas Bonfond
+:bust_in_silhouette: Nicolas Bonfond  
 :bust_in_silhouette: Mia Barbir  
 :bust_in_silhouette: Damien Macors
 
